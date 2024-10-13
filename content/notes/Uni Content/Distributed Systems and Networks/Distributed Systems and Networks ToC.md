@@ -1,0 +1,188 @@
+# Contents
+
+- P1. Physical and Link Layers
+    - P1. Layer Encapsulation %% [[Distributed Systems and Networks.pdf#page=1|P1]] %%
+    - P2. Transmitting Bits %% [[Distributed Systems and Networks.pdf#page=2|P2]] %%
+    - P2. Link Layer Functions %% [[Distributed Systems and Networks.pdf#page=2|P2]] %%
+    - P3. Flow Control %% [[Distributed Systems and Networks.pdf#page=3|P3]] %%
+    - P3. Link Layer Acknowledgements %% [[Distributed Systems and Networks.pdf#page=3|P3]] %%
+    - P3. Handling ACKs and Errors %% [[Distributed Systems and Networks.pdf#page=3|P3]] %%
+    - P4. Detecting Errors %% [[Distributed Systems and Networks.pdf#page=4|P4]] %%
+    - P5. Framing %% [[Distributed Systems and Networks.pdf#page=5|P5]] %%
+    - P5. MAC %% [[Distributed Systems and Networks.pdf#page=5|P5]] %%
+- P7. Internet & Network Layer
+    - P7. Network Layer Functions %% [[Distributed Systems and Networks.pdf#page=7|P7]] %%
+    - P8. IP Properties %% [[Distributed Systems and Networks.pdf#page=8|P8]] %%
+    - P9. Unreliability %% [[Distributed Systems and Networks.pdf#page=9|P9]] %%
+    - P9. IPv4 Packet Header %% [[Distributed Systems and Networks.pdf#page=9|P9]] %%
+    - P9. Fragmentation %% [[Distributed Systems and Networks.pdf#page=9|P9]] %%
+    - P10. Maximising use of Address Space %% [[Distributed Systems and Networks.pdf#page=10|P10]] %%
+    - P10. Subnets %% [[Distributed Systems and Networks.pdf#page=10|P10]] %%
+    - P11. CIDR %% [[Distributed Systems and Networks.pdf#page=11|P11]] %%
+    - P12. Cooperative Games. ARP %% [[Distributed Systems and Networks.pdf#page=12|P12]] %%
+    - P13. ICMP %% [[Distributed Systems and Networks.pdf#page=13|P13]] %%
+    - P13. Ethernet and LAN %% [[Distributed Systems and Networks.pdf#page=13|P13]] %%
+    - P13. MAC Address %% [[Distributed Systems and Networks.pdf#page=13|P13]] %%
+    - P14. Ethernet Switches %% [[Distributed Systems and Networks.pdf#page=14|P14]] %%
+    - P14. Address Resolution Protocol %% [[Distributed Systems and Networks.pdf#page=14|P14]] %%
+    - P16. Virtual LANs %% [[Distributed Systems and Networks.pdf#page=16|P16]] %%
+    - P17. Ethernet Frame Priority %% [[Distributed Systems and Networks.pdf#page=17|P17]] %%
+- P18. Transport Layer
+    - P18. UDP %% [[Distributed Systems and Networks.pdf#page=18|P18]] %%
+    - P18. UDP Loss %% [[Distributed Systems and Networks.pdf#page=18|P18]] %%
+    - P19. TCP %% [[Distributed Systems and Networks.pdf#page=19|P19]] %%
+    - P19. TCP/UDP Service Model %% [[Distributed Systems and Networks.pdf#page=19|P19]] %%
+    - P20. TCP Connection Establishment %% [[Distributed Systems and Networks.pdf#page=20|P20]] %%
+    - P21. TCP Flow Control %% [[Distributed Systems and Networks.pdf#page=21|P21]] %%
+    - P21. The Sliding Window %% [[Distributed Systems and Networks.pdf#page=21|P21]] %%
+    - P22. TCP Congestion Control %% [[Distributed Systems and Networks.pdf#page=22|P22]] %%
+    - P22. TCP for Video %% [[Distributed Systems and Networks.pdf#page=22|P22]] %%
+    - P23. UDP for Video/Audio %% [[Distributed Systems and Networks.pdf#page=23|P23]] %%
+    - P23. TCP vs UDP %% [[Distributed Systems and Networks.pdf#page=23|P23]] %%
+- P24. The Domain Name System
+    - P24. Looking up Data in the DNS %% [[Distributed Systems and Networks.pdf#page=24|P24]] %%
+    - P24. DNS Resolves %% [[Distributed Systems and Networks.pdf#page=24|P24]] %%
+    - P25. Finding DNS Servers %% [[Distributed Systems and Networks.pdf#page=25|P25]] %%
+    - P27. IP Routing Protocols %% [[Distributed Systems and Networks.pdf#page=27|P27]] %%
+    - P27. Routing within a Site %% [[Distributed Systems and Networks.pdf#page=27|P27]] %%
+    - P28. Types of Routing Protocol %% [[Distributed Systems and Networks.pdf#page=28|P28]] %%
+    - P29. Routing Information Protocol %% [[Distributed Systems and Networks.pdf#page=29|P29]] %%
+    - P29. RIP Limitations %% [[Distributed Systems and Networks.pdf#page=29|P29]] %%
+    - P30. Link State Routing %% [[Distributed Systems and Networks.pdf#page=30|P30]] %%
+    - P31. Inter-Site Routing %% [[Distributed Systems and Networks.pdf#page=31|P31]] %%
+- P33. IPv6
+    - P33. IPv4 Address Exhaustion %% [[Distributed Systems and Networks.pdf#page=33|P33]] %%
+    - P33. IPv6 Features %% [[Distributed Systems and Networks.pdf#page=33|P33]] %%
+    - P34. IPv6 Address Scopes %% [[Distributed Systems and Networks.pdf#page=34|P34]] %%
+    - P35. IPv6 Header %% [[Distributed Systems and Networks.pdf#page=35|P35]] %%
+    - P36. Extension Headers %% [[Distributed Systems and Networks.pdf#page=36|P36]] %%
+    - P36. Neighbour Discovery %% [[Distributed Systems and Networks.pdf#page=36|P36]] %%
+    - P37. Router Advertisements %% [[Distributed Systems and Networks.pdf#page=37|P37]] %%
+    - P37. Stateless Address Auto Configuration (SLAAC) %% [[Distributed Systems and Networks.pdf#page=37|P37]] %%
+    - P38. Privacy Extensions %% [[Distributed Systems and Networks.pdf#page=38|P38]] %%
+    - P38. Benefits of IPv6 %% [[Distributed Systems and Networks.pdf#page=38|P38]] %%
+    - P38. Dual Stack Systems %% [[Distributed Systems and Networks.pdf#page=38|P38]] %%
+    - P39. Translation Mechanisms %% [[Distributed Systems and Networks.pdf#page=39|P39]] %%
+    - P39. Tunnelling %% [[Distributed Systems and Networks.pdf#page=39|P39]] %%
+    - P39. Dual Stack Lite %% [[Distributed Systems and Networks.pdf#page=39|P39]] %%
+    - P40. Barriers to Deployment %% [[Distributed Systems and Networks.pdf#page=40|P40]] %%
+- P40. Application Layer Protocols
+    - P40. DHCP %% [[Distributed Systems and Networks.pdf#page=40|P40]] %%
+    - P40. Telnet %% [[Distributed Systems and Networks.pdf#page=40|P40]] %%
+    - P41. Simple Mail Transfer Protocol %% [[Distributed Systems and Networks.pdf#page=41|P41]] %%
+    - P41. IMAP %% [[Distributed Systems and Networks.pdf#page=41|P41]] %%
+    - P41. Hypertext Transfer Protocol %% [[Distributed Systems and Networks.pdf#page=41|P41]] %%
+    - P42. Quick UDP Internet Connections (QUIC) %% [[Distributed Systems and Networks.pdf#page=42|P42]] %%
+    - P42. Contrained Application Protocol %% [[Distributed Systems and Networks.pdf#page=42|P42]] %%
+    - P43. Real Time Streaming Protocol (RTSP) %% [[Distributed Systems and Networks.pdf#page=43|P43]] %%
+    - P43. File Sharing Protocols %% [[Distributed Systems and Networks.pdf#page=43|P43]] %%
+        - P43. SMB %% [[Distributed Systems and Networks.pdf#page=43|P43]] %%
+        - P43. NFS %% [[Distributed Systems and Networks.pdf#page=43|P43]] %%
+        - P43. P2P %% [[Distributed Systems and Networks.pdf#page=43|P43]] %%
+- P45. Network Security
+    - P45. DNS Exploitation %% [[Distributed Systems and Networks.pdf#page=45|P45]] %%
+    - P46. DNS Privacy %% [[Distributed Systems and Networks.pdf#page=46|P46]] %%
+    - P46. DNS Security Extensions %% [[Distributed Systems and Networks.pdf#page=46|P46]] %%
+    - P47. Firewalls %% [[Distributed Systems and Networks.pdf#page=47|P47]] %%
+    - P47. Stateful Firewalls %% [[Distributed Systems and Networks.pdf#page=47|P47]] %%
+    - P48. Application Layer Firewalls %% [[Distributed Systems and Networks.pdf#page=48|P48]] %%
+    - P48. Network Intrusion Detection %% [[Distributed Systems and Networks.pdf#page=48|P48]] %%
+    - P49. Physical Security %% [[Distributed Systems and Networks.pdf#page=49|P49]] %%
+    - P49. Network Access Control %% [[Distributed Systems and Networks.pdf#page=49|P49]] %%
+    - P49. 802.1x %% [[Distributed Systems and Networks.pdf#page=49|P49]] %%
+    - P50. IPSEC %% [[Distributed Systems and Networks.pdf#page=50|P50]] %%
+    - P50. Virtual Private Networking %% [[Distributed Systems and Networks.pdf#page=50|P50]] %%
+    - P51. Wireless Security %% [[Distributed Systems and Networks.pdf#page=51|P51]] %%
+    - P51. WEP %% [[Distributed Systems and Networks.pdf#page=51|P51]] %%
+    - P51. WPA/WPA2 %% [[Distributed Systems and Networks.pdf#page=51|P51]] %%
+    - P52. WPA PSK Vulnerabilities %% [[Distributed Systems and Networks.pdf#page=52|P52]] %%
+    - P52. KRACK %% [[Distributed Systems and Networks.pdf#page=52|P52]] %%
+    - P53. DDoS %% [[Distributed Systems and Networks.pdf#page=53|P53]] %%
+    - P53. TCP SYN Flood %% [[Distributed Systems and Networks.pdf#page=53|P53]] %%
+    - P54. LOIC & HOiC %% [[Distributed Systems and Networks.pdf#page=54|P54]] %%
+    - P54. Slow LORIS %% [[Distributed Systems and Networks.pdf#page=54|P54]] %%
+    - P54. IPv6 RA Flood %% [[Distributed Systems and Networks.pdf#page=54|P54]] %%
+    - P55. DDoS Mitigation %% [[Distributed Systems and Networks.pdf#page=55|P55]] %%
+- P55. MQTT & CoAP
+    - P57. CoAP Header %% [[Distributed Systems and Networks.pdf#page=57|P57]] %%
+    - P57. Resource Discovery %% [[Distributed Systems and Networks.pdf#page=57|P57]] %%
+- P58. Characteristics of Distributed Systems
+    - P58. Cloud Computing %% [[Distributed Systems and Networks.pdf#page=58|P58]] %%
+    - P59. Big Data %% [[Distributed Systems and Networks.pdf#page=59|P59]] %%
+    - P59. Decentralized Networks %% [[Distributed Systems and Networks.pdf#page=59|P59]] %%
+    - P59. internet of Things (IoT) %% [[Distributed Systems and Networks.pdf#page=59|P59]] %%
+    - P60. Edge and Fog Computing %% [[Distributed Systems and Networks.pdf#page=60|P60]] %%
+    - P60. Challenges of Distributed Systems %% [[Distributed Systems and Networks.pdf#page=60|P60]] %%
+- P62. Distributed Algorithms & Clocks
+    - P64. Synchronous and Asynchronous %% [[Distributed Systems and Networks.pdf#page=64|P64]] %%
+    - P64. Time in Distributed Systems %% [[Distributed Systems and Networks.pdf#page=64|P64]] %%
+    - P65. Clock Synchronizations %% [[Distributed Systems and Networks.pdf#page=65|P65]] %%
+    - P65. Synchronization Algorithms %% [[Distributed Systems and Networks.pdf#page=65|P65]] %%
+    - P66. Cristian's Algorithm %% [[Distributed Systems and Networks.pdf#page=66|P66]] %%
+    - P66. Berkely Algorithm %% [[Distributed Systems and Networks.pdf#page=66|P66]] %%
+    - P67. Network Time Protocol %% [[Distributed Systems and Networks.pdf#page=67|P67]] %%
+    - P67. Logical Clocks %% [[Distributed Systems and Networks.pdf#page=67|P67]] %%
+        - P67. Logical Time %% [[Distributed Systems and Networks.pdf#page=67|P67]] %%
+        - P68. The Happened-Before Relation %% [[Distributed Systems and Networks.pdf#page=68|P68]] %%
+        - P69. Lamport's Logical Clocks %% [[Distributed Systems and Networks.pdf#page=69|P69]] %%
+        - P69. Implementation of Logical Clocks %% [[Distributed Systems and Networks.pdf#page=69|P69]] %%
+        - P70. Vector Clocks %% [[Distributed Systems and Networks.pdf#page=70|P70]] %%
+        - P71. Vector Clock Implementation %% [[Distributed Systems and Networks.pdf#page=71|P71]] %%
+- P72. Physical, Architectural and Fundamental Models
+    - P72. Physical Models %% [[Distributed Systems and Networks.pdf#page=72|P72]] %%
+    - P73. Architectural Models %% [[Distributed Systems and Networks.pdf#page=73|P73]] %%
+    - P74. Architectural Elements %% [[Distributed Systems and Networks.pdf#page=74|P74]] %%
+    - P74. Communicating Entities %% [[Distributed Systems and Networks.pdf#page=74|P74]] %%
+    - P75. Communication Paradigms %% [[Distributed Systems and Networks.pdf#page=75|P75]] %%
+    - P76. Roles and Responsibilities %% [[Distributed Systems and Networks.pdf#page=76|P76]] %%
+    - P76. Placement %% [[Distributed Systems and Networks.pdf#page=76|P76]] %%
+    - P78. Architectural Patterns %% [[Distributed Systems and Networks.pdf#page=78|P78]] %%
+        - P78. Layering %% [[Distributed Systems and Networks.pdf#page=78|P78]] %%
+        - P79. Tiering %% [[Distributed Systems and Networks.pdf#page=79|P79]] %%
+        - P79. Thin Clients %% [[Distributed Systems and Networks.pdf#page=79|P79]] %%
+    - P80. Other Patterns %% [[Distributed Systems and Networks.pdf#page=80|P80]] %%
+    - P80. Fundamental Models %% [[Distributed Systems and Networks.pdf#page=80|P80]] %%
+    - P81. Interaction Model %% [[Distributed Systems and Networks.pdf#page=81|P81]] %%
+    - P83. Failure Models %% [[Distributed Systems and Networks.pdf#page=83|P83]] %%
+    - P85. Security Model %% [[Distributed Systems and Networks.pdf#page=85|P85]] %%
+- P87. Distributed Mutual Exclusion
+    - P87. Failure Assumptions %% [[Distributed Systems and Networks.pdf#page=87|P87]] %%
+    - P87. Failure Detectors %% [[Distributed Systems and Networks.pdf#page=87|P87]] %%
+    - P88. Distributed Mutual Exclusion Protocols %% [[Distributed Systems and Networks.pdf#page=88|P88]] %%
+    - P90. Central Server Algorithm %% [[Distributed Systems and Networks.pdf#page=90|P90]] %%
+    - P91. Ring Based Algorithm %% [[Distributed Systems and Networks.pdf#page=91|P91]] %%
+    - P92. Ricart and Agrawala's Algorithm %% [[Distributed Systems and Networks.pdf#page=92|P92]] %%
+    - P95. Mackawa's Algorithm %% [[Distributed Systems and Networks.pdf#page=95|P95]] %%
+    - P96. Mackawa's Voting Algorithm %% [[Distributed Systems and Networks.pdf#page=96|P96]] %%
+    - P98. Fault Tolerance %% [[Distributed Systems and Networks.pdf#page=98|P98]] %%
+- P99. Remote Invocation
+    - P101. Remote Procedure Call (RPC) %% [[Distributed Systems and Networks.pdf#page=101|P101]] %%
+    - P102. Design Issues for RPC %% [[Distributed Systems and Networks.pdf#page=102|P102]] %%
+        - P102. RPC Call Semantics %% [[Distributed Systems and Networks.pdf#page=102|P102]] %%
+    - P103. Remote Method Invocation (RMC) %% [[Distributed Systems and Networks.pdf#page=103|P103]] %%
+- P106. Web Services
+    - P106. Web Service Layers %% [[Distributed Systems and Networks.pdf#page=106|P106]] %%
+    - P107. SOAP Protocol %% [[Distributed Systems and Networks.pdf#page=107|P107]] %%
+    - P108. SOAP Messages %% [[Distributed Systems and Networks.pdf#page=108|P108]] %%
+    - P109. RESTful Web Services %% [[Distributed Systems and Networks.pdf#page=109|P109]] %%
+- P111. Leader Election
+    - P113. Ring-Based Algorithm %% [[Distributed Systems and Networks.pdf#page=113|P113]] %%
+    - P115. Bully Election Algorithm %% [[Distributed Systems and Networks.pdf#page=115|P115]] %%
+- P119. Distributed Transactions
+    - P121. Conflicting Operations %% [[Distributed Systems and Networks.pdf#page=121|P121]] %%
+    - P121. Concurrency Controls %% [[Distributed Systems and Networks.pdf#page=121|P121]] %%
+    - P122. Recoverability from Aborts %% [[Distributed Systems and Networks.pdf#page=122|P122]] %%
+    - P123. Two Phase Commit Protocol (2PC) %% [[Distributed Systems and Networks.pdf#page=123|P123]] %%
+- P125. Reliable and Ordered Multicast
+    - P127. Basic Multicast %% [[Distributed Systems and Networks.pdf#page=127|P127]] %%
+    - P127. Atomic Basic Multicast %% [[Distributed Systems and Networks.pdf#page=127|P127]] %%
+    - P127. Reliable Multicast %% [[Distributed Systems and Networks.pdf#page=127|P127]] %%
+	- P129. Ordered Multicast %% [[Distributed Systems and Networks.pdf#page=129|P129]] %%
+	- P130. Ordered Multicast: FIFO Ordering %% [[Distributed Systems and Networks.pdf#page=130|P130]] %%
+	- P130. Ordered Multicast: Total Ordering %% [[Distributed Systems and Networks.pdf#page=130|P130]] %%
+	- P132. Ordered Multicast: Causal Ordering %% [[Distributed Systems and Networks.pdf#page=132|P132]] %%
+
+# Document
+
+
+<iframe src="https://drive.google.com/file/d/1zN8u-GU7YLTQh4FQFCleK08YTu1tre7e/preview" width="640" height="780" allow="autoplay"></iframe>

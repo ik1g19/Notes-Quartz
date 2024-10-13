@@ -1,0 +1,9 @@
+- <kbd class="kbc-button kbc-button-xxs kbc-button-info">Shift</kbd> + <kbd class="kbc-button kbc-button-xxs kbc-button-info">Control</kbd> + <kbd class="kbc-button kbc-button-xxs kbc-button-info">P</kbd> 
+	- Search for commands
+	- Search for `Developer: Reload Window` to reload VSCode and fix issues
+- <kbd class="kbc-button kbc-button-xxs kbc-button-info">Control</kbd> + <kbd class="kbc-button kbc-button-xxs kbc-button-info">P</kbd>
+	- Navigate to VSCode file
+- <kbd class="kbc-button kbc-button-xxs kbc-button-info">Control</kbd> + <kbd class="kbc-button kbc-button-xxs kbc-button-info">'</kbd>
+	- Open terminal
+- <kbd class="kbc-button kbc-button-xxs kbc-button-info">Alt</kbd> + <kbd class="kbc-button kbc-button-xxs kbc-button-info">Z</kbd>
+	- Toggle word wrapping at edge of editor
