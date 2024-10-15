@@ -2,10 +2,6 @@
 title: "Computer Vision Techniques"
 ---
 
-# Background Subtraction
-
-What the fuck was he talking about in the background subtraction part
-
 # Wavelets
 
 Wavelets are used for:

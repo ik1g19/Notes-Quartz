@@ -16,6 +16,7 @@ def list(request):
 ```
 
 Now we create a new `urls` file
+
 📁`notes\urls.py`
 ```python
 from django.urls import path
