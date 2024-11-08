@@ -11,6 +11,8 @@
 	- Benefits of installing with NPM - you can swap between different versions of node for development
 - Postman - Used to test the API
 
+.NET for Backend and Node & React for front-end
+
 # Extensions for VSCode
 
 - C# for Visual Studio Code

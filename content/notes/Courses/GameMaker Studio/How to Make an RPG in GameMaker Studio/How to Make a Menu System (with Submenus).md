@@ -271,3 +271,5 @@ Add a `Clean Up` event to remove the font after to prevent a memory leak
 ```
 font_delete(global.font_main);
 ```
+
+Next: [[notes/Courses/GameMaker Studio/How to Make an RPG in GameMaker Studio/Branching Dialog System with Effects Setup and Typing Effect|Branching Dialog System with Effects Setup and Typing Effect]]

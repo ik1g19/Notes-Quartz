@@ -6,9 +6,9 @@
 
 The admin interface is available at `localhost:8000/admin`
 
-Django knows if the database is behind the system changes though files called migrations
+Django knows if the database is behind the system changes through files called migrations 
 
-Migrations explain what kind of changes a database needs to perform, such as creating new tables or establishing a new relationship
+Migrations explain what kind of changes a database needs to perform, such as creating new tables or establishing a new relationship ^migrations
 
 Django already has the migrations for the authentication system ready, so you need to apply them to the database through the `migrate` command
 

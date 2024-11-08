@@ -7,3 +7,5 @@
 	- Open terminal
 - <kbd class="kbc-button kbc-button-xxs kbc-button-info">Alt</kbd> + <kbd class="kbc-button kbc-button-xxs kbc-button-info">Z</kbd>
 	- Toggle word wrapping at edge of editor
+- <kbd class="kbc-button kbc-button-xxs kbc-button-info">Ctrl</kbd> + <kbd class="kbc-button kbc-button-xxs kbc-button-info">.</kbd>
+	- Generate constructor for member

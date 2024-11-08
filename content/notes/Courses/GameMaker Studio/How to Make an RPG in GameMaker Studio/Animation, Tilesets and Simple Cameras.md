@@ -155,3 +155,4 @@ A horizontal and vertical speed of -1 means that the viewport will be following 
 
 ![[notes/Courses/GameMaker Studio/How to Make an RPG in GameMaker Studio/Images/Pasted image 20240325022110.png|400]]
 
+Next: [[notes/Courses/GameMaker Studio/How to Make an RPG in GameMaker Studio/Depth and Decor|Depth and Decor]]

@@ -82,3 +82,5 @@ Now, a speakbox will create a textbox, store a reference to itself as `_s`, and 
 We can then set the `text_id` in the instance creation code of each speakbox
 
 ![[notes/Courses/GameMaker Studio/How to Make an RPG in GameMaker Studio/Images/Pasted image 20240328003039.png|600]]
+
+Next: [[notes/Courses/GameMaker Studio/How to Make an RPG in GameMaker Studio/Part 2 Branching Dialog|Part 2 Branching Dialog]]

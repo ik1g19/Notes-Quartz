@@ -9,7 +9,7 @@ In Java, the `transient` keyword is used as a modifier for instance variables (f
 >Serialization is the process of converting an object into a byte stream, which can then be stored to a file, sent over a network, or transferred in any way. Deserialization is the reverse process: converting the byte stream back into an object.
 
 
-%% See also  [[Programming 2.pdf#page=29|Programming 2 P29]] %%
+%% See also  [[Git Ignore/Heavy Stuff/Uni PDFs/Programming 2.pdf#page=29|Programming 2 P29]] %%
 
 
 ## Role of `transient`

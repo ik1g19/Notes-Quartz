@@ -80,3 +80,5 @@ y += yspd;
 `x` and `y` do not specify the actual point to check collision for, rather they represent where the position of the collision mask associated with the calling object is
 
 so `x + xpsd, y, obj_wall` means check if there is a collision between the calling collision mask at position `x + xspd, y` with the collision mask associated with `obj_wall`
+
+Next: [[notes/Courses/GameMaker Studio/How to Make an RPG in GameMaker Studio/Animation, Tilesets and Simple Cameras|Animation, Tilesets and Simple Cameras]]

@@ -34,3 +34,4 @@ Now when the player is stood behind the bed, since the bed will have a lower `de
 
 ![[notes/Courses/GameMaker Studio/How to Make an RPG in GameMaker Studio/Images/Pasted image 20240325202114.png|600]]
 
+Next: [[notes/Courses/GameMaker Studio/How to Make an RPG in GameMaker Studio/Room Transitions|Room Transitions]]

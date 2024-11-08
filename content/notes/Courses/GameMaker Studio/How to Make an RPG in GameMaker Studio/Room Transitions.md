@@ -132,3 +132,5 @@ To have the warp object act as a pauser, set it as a child object
 ![[notes/Courses/GameMaker Studio/How to Make an RPG in GameMaker Studio/Images/Pasted image 20240326002957.png|600]]
 
 Any object that needs to pause the game can inherit from `obj_pauser` to implement this
+
+Next: [[notes/Courses/GameMaker Studio/How to Make an RPG in GameMaker Studio/How to Make a Menu System (with Submenus)|How to Make a Menu System (with Submenus)]]

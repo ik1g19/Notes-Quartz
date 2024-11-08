@@ -15,7 +15,7 @@ It should link together the main architectural elements
 # Creating DotNet Projects and References
 
 
-`dotnet --info` to see installed versions
+`dotnet --info` to see installed versions - can check if dotnet is installed
 
 `dotnet new list` - a list of things we can create using the `dotnet` command line utility
 - We are going to create a `webapi` project
@@ -118,6 +118,7 @@ cd to API and run `dotnet run` to start the application
 
 We will use
 
+📁`API\Properties\launchSettings.json`
 ```json
 {
   "$schema": "http://json.schemastore.org/launchsettings.json",
@@ -144,7 +145,7 @@ We have chosen to use port 5000 in
 "applicationUrl": "http://localhost:5000"
 ```
 
-`Program.cs` is the entry point for any dotnet application
+`API\Program.cs` is the entry point for any dotnet application
 
 The configuration files are `appsettings.json` and `appsettings.Development.json`
 
@@ -164,8 +165,7 @@ We will change `appsettings.Development.json` to
 }
 ```
 
-In `Program.cs`
-
+📁`API\Program.cs`
 ```cs
 var builder = WebApplication.CreateBuilder(args);
 
@@ -201,6 +201,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 ```
 
+>[!INFO]
+>We add services to provide more functionality
+
 This section handles HTTP requests on their way in and out:
 
 ```cs
@@ -214,6 +217,9 @@ if (app.Environment.IsDevelopment())
 
 Any middleware will go in this section
 
+>[!INFO]
+>Think of middleware as something that can perform operations on the `HTTP` request on its way in or way out
+
 `app.MapControllers();` is used to tell requests which controllers under `API>Controllers` they should be sent to
 
 `app.Run()` starts the application
@@ -225,8 +231,7 @@ The server is now listening on `localhost:5000/swagger/index.html`
 
 `app.MapControllers();` references the controllers under `API>Controllers`
 
-Under `Controllers` is `WeatherForecastController.cs`
-
+📁`API\Controllers\WeatherForecastController.cs`
 ```cs
 using Microsoft.AspNetCore.Mvc;
 
@@ -384,8 +389,9 @@ We can then use the quick fix suggestion on the `DataContext` class to generate 
 
 ![[notes/Courses/Udemy Courses/Complete guide to building an app with DotNet Core and React/Images/Pasted image 20240420205141.png]]
 
-`DbSet`s represent the tables that we are going to create
+`DbSet`'s represent the tables that we are going to create
 
+📁`Persistence\DataContext.cs`
 ```cs
 using Domain;
 using Microsoft.EntityFrameworkCore;
@@ -409,7 +415,7 @@ We specify in `Program.cs` that we want to add this as a service
 >[!info]
 >If vscode can't find `DbContext` then run `dotnet restore` in the terminal to make the package visible
 
-
+📁`API\Program.cs`
 ```cs
 // Add services to the container.
 
@@ -426,6 +432,7 @@ We pass the options as a lambda expression, which contains the databases connect
 
 We then need to add the connection string to `appsettings.Development.json`
 
+📁`API\appsettings.Development.json`
 ```json
 {
   "Logging": {
@@ -444,12 +451,12 @@ We then need to add the connection string to `appsettings.Development.json`
 >A `connection string` refers to a string that contains information necessary for establishing a connection to a data source, typically a database
 >By configuring the connection string in the `appsettings.Development.json` file, you can easily change the database configuration without modifying the application code. This separation of configuration from code promotes flexibility and maintainability in your application.
 
-
-
-
 # Creating an Entity Framework Code First Migration
 
 We now create an Entity Framework Code First Migration
+
+>[!INFO]
+>More on [[notes/Courses/Django Training/Django Built in User Management#^migrations|migrations]]
 
 Since we've written the code first we are now going to create something that will generate the schema for the database
 
@@ -475,6 +482,8 @@ Inside the `Persistence` project we now have a folder called 📁`Migrations`
 The `InitialCreate.cs` class is the class that was created by entity framework
 
 It has two methods for moving up and moving down, the `CreateTable` method will create the database and use the field `Id` as the primary key
+
+Example migration:
 
 ```cs
 using System;
@@ -524,15 +533,13 @@ namespace Persistence.Migrations
 >- **Moving Up (Upgrading):** When you apply a migration, you are "moving up" in the migration history. This means that you are applying the changes defined in the migration to the database schema. The `Up` method in the migration class contains the code necessary to apply these changes. It typically includes creating or altering database tables, columns, indexes, etc.
 >- **Moving Down (Downgrading):** When you revert a migration, you are "moving down" in the migration history. This means that you are undoing the changes made by a specific migration. The `Down` method in the migration class contains the code necessary to revert the changes made in the `Up` method. It typically includes dropping tables, columns, indexes, etc.
 
-
-
-
 # Creating the Database
 
 We need to create a scope so that we have access to one of the services within the HTTP request scope
 
 We use `using` since we want to control the lifetime of this variable, it would be garbage collected anyway but since we know we only want to use the variable temporarily we will use `using` so that the memory is freed after
 
+📁`API\Program.cs`
 ```cs
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
@@ -540,6 +547,7 @@ var services = scope.ServiceProvider;
 
 We will now create the database using the initial migration in a try-catch block
 
+📁`API\Program.cs`
 ```cs
 try {
 	var context = services.GetRequiredService<DataContext>();
@@ -572,117 +580,7 @@ Create a new class in 📁`Persistence` called `Seed.cs`
 
 `SeedData.txt` has seed data for the database
 
-```
-using Domain;
-namespace Persistence
-{
-    public class Seed
-    {
-        public static async Task SeedData(DataContext context)
-        {
-            if (context.Activities.Any()) return;
-            
-            var activities = new List<Activity>
-            {
-                new Activity
-                {
-                    Title = "Past Activity 1",
-                    Date = DateTime.UtcNow.AddMonths(-2),
-                    Description = "Activity 2 months ago",
-                    Category = "drinks",
-                    City = "London",
-                    Venue = "Pub",
-                },
-                new Activity
-                {
-                    Title = "Past Activity 2",
-                    Date = DateTime.UtcNow.AddMonths(-1),
-                    Description = "Activity 1 month ago",
-                    Category = "culture",
-                    City = "Paris",
-                    Venue = "Louvre",
-                },
-                new Activity
-                {
-                    Title = "Future Activity 1",
-                    Date = DateTime.UtcNow.AddMonths(1),
-                    Description = "Activity 1 month in future",
-                    Category = "culture",
-                    City = "London",
-                    Venue = "Natural History Museum",
-                },
-                new Activity
-                {
-                    Title = "Future Activity 2",
-                    Date = DateTime.UtcNow.AddMonths(2),
-                    Description = "Activity 2 months in future",
-                    Category = "music",
-                    City = "London",
-                    Venue = "O2 Arena",
-                },
-                new Activity
-                {
-                    Title = "Future Activity 3",
-                    Date = DateTime.UtcNow.AddMonths(3),
-                    Description = "Activity 3 months in future",
-                    Category = "drinks",
-                    City = "London",
-                    Venue = "Another pub",
-                },
-                new Activity
-                {
-                    Title = "Future Activity 4",
-                    Date = DateTime.UtcNow.AddMonths(4),
-                    Description = "Activity 4 months in future",
-                    Category = "drinks",
-                    City = "London",
-                    Venue = "Yet another pub",
-                },
-                new Activity
-                {
-                    Title = "Future Activity 5",
-                    Date = DateTime.UtcNow.AddMonths(5),
-                    Description = "Activity 5 months in future",
-                    Category = "drinks",
-                    City = "London",
-                    Venue = "Just another pub",
-                },
-                new Activity
-                {
-                    Title = "Future Activity 6",
-                    Date = DateTime.UtcNow.AddMonths(6),
-                    Description = "Activity 6 months in future",
-                    Category = "music",
-                    City = "London",
-                    Venue = "Roundhouse Camden",
-                },
-                new Activity
-                {
-                    Title = "Future Activity 7",
-                    Date = DateTime.UtcNow.AddMonths(7),
-                    Description = "Activity 2 months ago",
-                    Category = "travel",
-                    City = "London",
-                    Venue = "Somewhere on the Thames",
-                },
-                new Activity
-                {
-                    Title = "Future Activity 8",
-                    Date = DateTime.UtcNow.AddMonths(8),
-                    Description = "Activity 8 months in future",
-                    Category = "film",
-                    City = "London",
-                    Venue = "Cinema",
-                }
-            };
-
-            await context.Activities.AddRangeAsync(activities);
-            await context.SaveChangesAsync();
-        }
-    }
-}
-
-```
+[[notes/Courses/Udemy Courses/Complete guide to building an app with DotNet Core and React/Seed Data|Seed Data]]
 
 ## Using Seed Data
 
@@ -692,6 +590,7 @@ We then seed the data in `Program.cs`
 - We will receive a notification from a delegate once it has updated the database
 - We will use the asynchronous version of Migrate as well
 
+📁`API\Program.cs`
 ```cs
 try {
     var context = services.GetRequiredService<DataContext>();
@@ -705,14 +604,13 @@ catch (Exception ex) {
 }
 ```
 
-The activities will now be visible in the activities db when the app is started
+The activities will now be visible in the activities `db` when the app is started
 
 # Adding an API Controller
 
 Now we have data in the database we need to create a controller so that we can query the database and return data inside a HTTP response
 
-We create a new controller under 📁`Controllers` called `BaseApiController.cs`
-
+📁`API\Controllers\BaseApiController.cs` 
 ```cs
 using Microsoft.AspNetCore.Mvc;
 
@@ -736,8 +634,9 @@ It derives from `ControllerBase`
 > The text between the square brackets `[api/controller]` is an attribute used in C# and ASP.NET Core for routing. In this case, it's defining that the controller will be accessible under the API endpoint `/api/{controller}` (where {controller} is the name of the controller class)
 > `[ApiController]` is a convenient attribute that sets up various features for building RESTful APIs with ASP.NET Core, including automatic model state validation, response formatting, and error handling
 
-We create another new controller under 📁`Controllers` called `ActivitiesController`
+We create another new controller
 
+📁`API\Controllers\ActivitiesController.cs`
 ```cs
 using Domain;
 using Microsoft.AspNetCore.Mvc;
@@ -769,6 +668,7 @@ namespace API.Controllers
     }
 }
 ```
+^create-act-controller
 
 The controller has two endpoints
 

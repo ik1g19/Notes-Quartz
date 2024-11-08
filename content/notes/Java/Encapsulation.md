@@ -5,15 +5,15 @@
 >[!SUMMARY]
 >Encapsulation is the principle that every class should be responsible for itself
 
-%%([[Drive Sync/Lecture Slides/Programming I/Super 20and 20sub-classes.pdf#page=20&selection=4,0,6,32&color=yellow|Super and sub-classes, p.20]])%%
+%%([[Git Ignore/Heavy Stuff/Lecture Slides/Programming I/Super 20and 20sub-classes.pdf#page=20&selection=4,0,6,32&color=yellow|Super and sub-classes, p.20]])%%
 
 ![[Images/Super 20and 20sub-classes.png]]
 
-%%[[Drive Sync/Lecture Slides/Programming I/Super 20and 20sub-classes.pdf#page=27&rect=14,8,675,500&color=yellow|Super and sub-classes, p.27]]%%
+%%[[Git Ignore/Heavy Stuff/Lecture Slides/Programming I/Super 20and 20sub-classes.pdf#page=27&rect=14,8,675,500&color=yellow|Super and sub-classes, p.27]]%%
 
 ![[Images/Super 20and 20sub-classes 1.png]]
 
-%%[[Drive Sync/Lecture Slides/Programming I/Super 20and 20sub-classes.pdf#page=28&rect=13,8,640,522&color=yellow|Super and sub-classes, p.28]]%%
+%%[[Git Ignore/Heavy Stuff/Lecture Slides/Programming I/Super 20and 20sub-classes.pdf#page=28&rect=13,8,640,522&color=yellow|Super and sub-classes, p.28]]%%
 
 ## Why Encapsulation?
 
