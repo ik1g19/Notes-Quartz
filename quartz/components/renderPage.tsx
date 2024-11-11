@@ -66,20 +66,6 @@ export function renderPage(
 
   // process transcludes in componentData
   visit(root, "element", (node, _index, _parent) => {
-    if (node.tagName === "a") {
-      const classNames = (node.properties?.className ?? []) as string[]
-
-      // Check if the element has both classes "internal" and "tag-link"
-      if (classNames.includes("internal") && classNames.includes("tag-link")) {
-        const originalHref = node.properties.href as string
-
-        // Modify the href only if it doesn't already contain the prefix to avoid duplication
-        if (originalHref && !originalHref.startsWith("/Notes-Quartz")) {
-          node.properties.href = "/Notes-Quartz" + originalHref
-        }
-      }
-    }
-    
     if (node.tagName === "blockquote") {
       const classNames = (node.properties?.className ?? []) as string[]
       if (classNames.includes("transclude")) {

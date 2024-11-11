@@ -6,7 +6,7 @@
 >Encapsulation is the principle that every class should be responsible for itself
 
 %%([[Git Ignore/Heavy Stuff/Lecture Slides/Programming I/Super 20and 20sub-classes.pdf#page=20&selection=4,0,6,32&color=yellow|Super and sub-classes, p.20]])%%
-
+s
 ![[Images/Super 20and 20sub-classes.png]]
 
 %%[[Git Ignore/Heavy Stuff/Lecture Slides/Programming I/Super 20and 20sub-classes.pdf#page=27&rect=14,8,675,500&color=yellow|Super and sub-classes, p.27]]%%
