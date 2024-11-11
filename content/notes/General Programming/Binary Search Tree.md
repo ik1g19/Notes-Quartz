@@ -1,3 +1,5 @@
+#trees
+
 # Binary Tree
 
 - Nodes can have up to two children

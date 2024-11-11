@@ -1,3 +1,5 @@
+#trees
+
 Nodes are either red or black
 
 ![[Images/algorithmics rotated cropped 3.png]]

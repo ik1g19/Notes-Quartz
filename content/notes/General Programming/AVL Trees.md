@@ -1,3 +1,5 @@
+#trees
+
 An AVL tree is a binary search tree such that
 - the heights of the left and right subtree differ by at most 1
 - the left and right subtrees are AVL trees

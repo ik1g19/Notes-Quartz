@@ -14,9 +14,6 @@ title: "Advanced Programming Language Concepts ToC"
 # Week 4
 #### [[notes/Uni Content/Advanced Programming Language Concepts/Week 4/Dependent Types|Dependent Types]]
 
-# Week 5
-#### [[notes/Uni Content/Advanced Programming Language Concepts/Week 5/Lenses|Lenses]]
-
 # Week 6
 #### [[notes/Uni Content/Advanced Programming Language Concepts/Week 6/Hygienic Macros|Hygienic Macros]]
 #### [[notes/Uni Content/Advanced Programming Language Concepts/Week 6/Introduction to Metaprogramming|Introduction to Metaprogramming]]

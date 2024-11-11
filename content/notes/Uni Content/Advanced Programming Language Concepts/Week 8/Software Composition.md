@@ -1,6 +1,4 @@
----
-title: "Software Composition"
----
+#composition #inheritance #design-patterns
 
 # Problems with Inheritance
 
@@ -180,12 +178,16 @@ This drawback is easily avoided using language support though
 
 # Patterns
 
-The Gang of Four Design Patterns book contains lots of patterns that deal with object composition from a structural point of view.
-Let's have a look at two of these.
-A Decorator is itself a Component and also contains a reference to a Component.
+The Gang of Four Design Patterns book contains lots of patterns that deal with object composition from a structural point of view
+
+Let's have a look at two of these
+
+A Decorator is itself a Component and also contains a reference to a Component
+
 
 Concrete Components can be "decorated" by wrapping Components
-Calls of base methods are delegated to the wrapped Component.
+
+Calls of base methods are delegated to the wrapped Component
 
 The decorator adds extra functionality as needed
 
