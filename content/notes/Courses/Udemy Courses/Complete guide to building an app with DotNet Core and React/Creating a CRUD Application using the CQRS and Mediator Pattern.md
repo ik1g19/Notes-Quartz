@@ -237,3 +237,201 @@ namespace API.Controllers
 
 # Adding a Create Handler
 
+Create a `create` class
+
+📁`Application\Activities\Create.cs`
+```cs
+using Domain;
+using MediatR;
+using Persistence;
+
+namespace Application.Activities
+{
+    public class Create
+    {
+        public class Command : IRequest {
+            // what we want to receive as a parameter from the API
+            public Activity Activity {get; set;}
+        }
+
+        public class Handler : IRequestHandler<Command>
+        {
+            private readonly DataContext _context;
+
+            public Handler(DataContext context)
+            {
+            _context = context;
+            }
+
+            public async Task Handle(Command request, CancellationToken cancellationToken)
+            {
+                _context.Activities.Add(request.Activity);
+
+                await _context.SaveChangesAsync();
+            }
+        }
+    }
+}
+```
+
+We now create the endpoint in the `ActivitiesController`
+
+📁`API\Controllers\ActivitiesController.cs`
+```cs
+using Application.Activities;
+using Domain;
+using Microsoft.AspNetCore.Mvc;
+
+namespace API.Controllers
+{
+    public class ActivitiesController : BaseApiController
+    {
+
+        [HttpGet]
+        public async Task<ActionResult<List<Activity>>> GetActivities()
+        {
+            return await Mediator.Send(new List.Query());
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Activity>> GetActivity(Guid id)
+        {
+            return await Mediator.Send(new Details.Query{Id = id});
+        }
+
+        // Endpoint for creating an activity
+        [HttpPost]
+        public async Task<IActionResult> CreateActivity(Activity activity) {
+            await Mediator.Send(new Create.Command {Activity = activity});
+
+            return Ok();
+        }
+    }
+}
+```
+
+# Adding an Edit Handler
+
+Create an `Edit` class
+
+📁`Application\Activities\Edit.cs`
+```cs
+using Domain;
+using MediatR;
+using Persistence;
+
+namespace Application.Activities
+{
+    public class Edit
+    {
+        public class Command : IRequest {
+            public Activity Activity {get; set;}
+        }
+
+        public class Handler : IRequestHandler<Command> {
+            public DataContext _context { get; }
+
+            public Handler(DataContext context) {
+            _context = context;
+
+            }
+
+            public async Task Handle(Command request, CancellationToken cancellationToken)
+            {
+                var activity = await _context.Activities.FindAsync(request.Activity.Id);
+
+                activity.Title = request.Activity.Title ?? activity.Title;
+
+                await _context.SaveChangesAsync();
+            }
+        }
+    }
+}
+```
+
+Create the `Put` endpoint in the `ActivitiesController`
+
+This time the endpoint accepts a parameter
+
+📁`API\Controllers\ActivitiesController.cs`
+```cs
+...
+// Endpoint for editing an activity
+[HttpPut("{id}")]
+public async Task<IActionResult> EditActivity(Guid id, Activity activity) {
+	activity.Id = id;
+
+	await Mediator.Send(new Edit.Command {Activity = activity});
+
+	return Ok();
+}
+...
+```
+
+# Adding `AutoMapper`
+
+We create a new `Core` folder in our application project
+
+`Core` will be responsible for things that are applicable to all of our features
+
+We use `NuGet` gallery to add the `AutoMapper` `DependencyInjection` to our `Application` project
+
+We create a `MappingProfiles` class
+
+📁`Application\Core\MappingProfiles.cs`
+```cs
+using AutoMapper;
+using Domain;
+
+namespace Application.Core
+{
+    public class MappingProfiles : Profile
+    {
+        public MappingProfiles() {
+            CreateMap<Activity, Activity>();
+        }
+    }
+}
+```
+
+Now, instead of `activity.Title = request.Activity.Title ?? activity.Title;`
+
+We can use `AutoMapper`
+
+📁`Application\Activities\Edit.cs`
+```cs
+...
+public class Handler : IRequestHandler<Command> {
+	public DataContext _context { get; }
+	private readonly IMapper _mapper;
+
+	public Handler(DataContext context, IMapper mapper) {
+		_mapper = mapper;
+		_context = context;
+	}
+
+	public async Task Handle(Command request, CancellationToken cancellationToken)
+	{
+		var activity = await _context.Activities.FindAsync(request.Activity.Id);
+
+		_mapper.Map(request.Activity, activity);
+
+		await _context.SaveChangesAsync();
+	}
+}
+...
+```
+
+This now means we can allow a user to update all of a fields properties at once
+
+Since we have now added a new dependency we add it to the `Services` section of `Program`
+
+📁`API\Program.cs`
+```cs
+...
+builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
+...
+```
+
+# Adding a Delete Handler
+

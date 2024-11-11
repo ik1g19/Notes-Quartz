@@ -1,7 +1,3 @@
----
-title: "Aspect Oriented Programming"
----
-
 # Separation of Concerns
 
 A **concern** is a specific requirement or consideration that must be addressed in order to satisfy the overall system goal

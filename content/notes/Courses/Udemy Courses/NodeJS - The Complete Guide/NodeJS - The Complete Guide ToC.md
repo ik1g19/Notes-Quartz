@@ -23,8 +23,8 @@ NodeJS adds features to V8
 
 #### [[notes/Courses/Udemy Courses/NodeJS - The Complete Guide/NodeJS|NodeJS]]
 
-#### [[notes/Courses/Udemy Courses/NodeJS - The Complete Guide/Improved Development Workflow and Debugging]]
+#### [[notes/Courses/Udemy Courses/NodeJS - The Complete Guide/Improved Development Workflow and Debugging|Improved Development Workflow and Debugging]]
 
-#### [[notes/Courses/Udemy Courses/NodeJS - The Complete Guide/ExpressJS]]
+#### [[notes/Courses/Udemy Courses/NodeJS - The Complete Guide/ExpressJS|ExpressJS]]
 
-#### [[notes/Courses/Udemy Courses/NodeJS - The Complete Guide/Dynamic Content and Template]]
+#### [[notes/Courses/Udemy Courses/NodeJS - The Complete Guide/Dynamic Content and Template|Dynamic Content and Template]]
