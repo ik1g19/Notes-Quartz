@@ -71,13 +71,15 @@ export function renderPage(
       // Check if the element has both classes "internal" and "tag-link"
       if (classNames.includes("internal") && classNames.includes("tag-link")) {
         const originalHref = node.properties.href as string
-        // Modify the href only if it doesn't already contain the prefix to avoid duplication
-        if (originalHref && !originalHref.startsWith("/Notes-Quartz")) {
-          node.properties.href = "Notes-Quartz" + originalHref
+        // Check if the href contains "tags" and modify it
+        if (originalHref && originalHref.includes("tags")) {
+          // Extract the part of the href starting from "tags"
+          const modifiedHref = originalHref.replace(/^.*?(tags.*)$/, '$1')
+          // Prepend "Notes-Quartz../../.././../../" to the modified href
+          node.properties.href = "Notes-Quartz../../.././../../" + modifiedHref
         }
       }
     }
-
     if (node.tagName === "blockquote") {
       const classNames = (node.properties?.className ?? []) as string[]
       if (classNames.includes("transclude")) {
