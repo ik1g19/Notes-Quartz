@@ -76,7 +76,7 @@ export function renderPage(
           // Extract the part of the href starting from "tags"
           const modifiedHref = originalHref.replace(/^.*?(tags.*)$/, '$1')
           // Prepend "Notes-Quartz../../.././../../" to the modified href
-          node.properties.href = "Notes-Quartz/../../.././../../" + modifiedHref
+          node.properties.href = "/Notes-Quartz/" + modifiedHref
         }
       }
     }
