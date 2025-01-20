@@ -10,10 +10,32 @@ A design pattern should have low **coupling** (modules can be *replaced easily*)
 
 # Factory
 
-[[notes/General Programming/Design Patterns/Factory Patterns|Factory Pattern Example]]
+[[notes/General Programming/Design Patterns/Factory|Factory Pattern Example]]
 
-![[notes/General Programming/Design Patterns/Factory Patterns#^fac-graphic|Factory Patterns]]
+![[notes/General Programming/Design Patterns/Factory#^fac-graphic|Factory Patterns]]
 
 # Singleton
 
-[[notes/General Programming/Design Patterns/Singleton|Singleton]]
+[[notes/General Programming/Design Patterns/Singleton|Singleton Example]]
+
+![[notes/General Programming/Design Patterns/Singleton#^singleton-imp]]
+
+# Builder
+
+[[notes/General Programming/Design Patterns/Builder|Builder Example]]
+
+![[notes/General Programming/Design Patterns/Builder#^builder-imp]]
+
+# Adapter
+
+[[notes/General Programming/Design Patterns/Adapter|Adapter Example]]
+
+![[notes/General Programming/Design Patterns/Adapter#^adapter-example]]
+
+# Decorator
+
+[[notes/General Programming/Design Patterns/Decorator|Decorator Example]]
+
+# Observer
+
+[[notes/General Programming/Design Patterns/Observer|Observer Example]]

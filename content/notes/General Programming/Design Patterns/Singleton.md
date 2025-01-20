@@ -50,7 +50,7 @@ public static Singleton getInstance()
 
 # Implementation
 
-![[Images/Screenshot-2023-12-07-174635.png]]
+![[Images/Screenshot-2023-12-07-174635.png]] ^singleton-imp
 
 ```java
 /*package whatever //do not write package name here */
